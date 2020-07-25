@@ -1,0 +1,296 @@
+.dix-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.dix-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    font-family: consolas;
+}
+
+@mixin clear($size) {
+    clear: both;
+    height: $size;
+    font-size: 0;
+    float: none;
+    overflow: hidden;
+}
+
+@mixin clearGray($size) {
+    clear: both;
+    height: $size;
+    font-size: 0;
+    float: none;
+    overflow: hidden;
+    background: #f6f6f6;
+}
+
+.clear-gray-24 {
+    @include clearGray(24rpx);
+}
+
+.clear-gray-200 {
+    @include clearGray(200rpx);
+}
+
+.clear-0 {
+    @include clear(0rpx);
+}
+
+.clear-5 {
+    @include clear(5rpx);
+}
+
+.clear-10 {
+    @include clear(10rpx);
+}
+
+.clear-15 {
+    @include clear(15rpx);
+}
+
+.clear-20 {
+    @include clear(20rpx);
+}
+
+.clear-25 {
+    @include clear(25rpx);
+}
+
+.clear-30 {
+    @include clear(30rpx);
+}
+
+.clear-40 {
+    @include clear(40rpx);
+}
+
+.clear-50 {
+    @include clear(50rpx);
+}
+
+.clear-80 {
+    @include clear(80rpx);
+}
+
+.clear-100 {
+    @include clear(100rpx);
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+@mixin pt($size) {
+    padding-top: $size;
+}
+
+.pt-0 {
+    @include pt(0px)
+}
+
+.pt-6 {
+    @include pt(6px)
+}
+
+.pt-15 {
+    @include pt(15px)
+}
+
+@mixin pl($size) {
+    padding-left: $size;
+}
+
+.pl-0 {
+    @include pl(0px)
+}
+
+.pl-10 {
+    @include pl(10px)
+}
+
+.pl-15 {
+    @include pl(15px)
+}
+
+@mixin pr($size) {
+    padding-right: $size;
+}
+
+.pr-0 {
+    @include pr(0px)
+}
+
+.pr-10 {
+    @include pr(10px)
+}
+
+.pr-15 {
+    @include pr(15px)
+}
+
+.pr-30 {
+    @include pr(30px)
+}
+
+.form-control {
+    width: 100%;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pad-tb-10 {
+    padding: 10rpx 0;
+}
+
+.flex-container {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox; /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Chrome */
+    display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+
+.flex-content {
+    -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+    -moz-box-flex: 1; /* OLD - Firefox 19- */
+    /* width: 20%; */
+    /* For old syntax, otherwise collapses. */
+    /* 见本文底部评论@Lawrence */
+    -webkit-flex: 1; /* Chrome */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    overflow: auto;
+}
+
+.flex-footer {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0 30px;
+    height: 60px;
+    background: #fff;
+
+    .flex-footer-content {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+@mixin ml($size) {
+    margin-left: $size;
+}
+
+.ml-5 {
+    @include ml(5px)
+}
+
+.ml-8 {
+    @include ml(8px)
+}
+
+.ml-10 {
+    @include ml(10px)
+}
+
+@mixin mr($size) {
+    margin-right: $size;
+}
+
+.mr-5 {
+    @include mr(5px)
+}
+
+.mr-30 {
+    @include mr(30px)
+}
+
+@mixin mt($size) {
+    margin-top: $size;
+}
+
+.mt-5 {
+    @include mt(5px)
+}
+
+.mt-10 {
+    @include mt(10px)
+}
+
+.mt-30 {
+    @include mt(30px)
+}
+
+@mixin mb($size) {
+    margin-bottom: $size;
+}
+
+.mb-10 {
+    @include mb(10px)
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.hr-line-dashed {
+    border-top: 1px dashed #e7eaec;
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.link {
+    color: #337ab7;
+
+    &:hover {
+        color: #23527c;
+    }
+}
+
+.consolas {
+    font-family: Consolas, "Courier New";
+}
